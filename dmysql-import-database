@@ -19,7 +19,7 @@ def runContainer(containerName, path, database = ""):
 	fileName = pathList[-1]
 
 	# Read the path and get the directory
-	dirname = os.path.dirname(path)
+	dirname = os.path.dirname(os.path.realpath(path))
 
 	if database:
 		print 'Importing {file} into database {database} using container {container}'.format(file=fileName, database=database, container=containerName)
